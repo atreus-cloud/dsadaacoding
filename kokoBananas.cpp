@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+/*our answer space is in between 1 to max(v[]), but why? observe that the max no of bananas that koko can
+consume is the max value of pile of bananas*/
 int findMax(vector<int> &v) {
     int maxi = INT_MIN;
     int n = v.size();
@@ -10,7 +11,7 @@ int findMax(vector<int> &v) {
     }
     return maxi;
 }
-
+//using ceil here just in case if you cant eat in some multiple of hourly, but why?
 int calculateTotalHours(vector<int> &v, int hourly) {
     int totalH = 0;
     int n = v.size();
